@@ -37,14 +37,33 @@ public class PersonList {
         return result;
     }
 
-    public Map<Integer, String> ageToName() {
-        Map<Integer, String> result = new HashMap<>();
+    public Map<String, List<String>> hairColourToName() {
+        Map<String, List<String>> result = new HashMap<>();
         for (Person person : persons) {
-            result.put(person.getAge(), person.getName());
+            List<String> nameList = result.get(person.getHairColour());
+            if (nameList == null) {
+                nameList = new ArrayList();
+            }
+            nameList.add(person.getName());
+            result.put(person.getHairColour(), nameList);
+        }
+        return result;
+    }
+
+    public Map<Integer, List<String>> ageToName() {
+        Map<Integer, List<String>> result = new HashMap<>();
+        for (Person person : persons) {
+            List<String> nameList = result.get(person.getAge());
+            if (nameList == null) {
+                nameList = new ArrayList();
+            }
+            nameList.add(person.getName());
+            result.put(person.getAge(), nameList);
         }
         return result;
     }
 }
+
 
 
 
