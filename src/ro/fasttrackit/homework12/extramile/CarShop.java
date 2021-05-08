@@ -1,4 +1,4 @@
-package ro.fasttrackit.homework12.car;
+package ro.fasttrackit.homework12.extramile;
 
 import java.util.*;
 

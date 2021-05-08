@@ -1,4 +1,4 @@
-package ro.fasttrackit.homework12.car;
+package ro.fasttrackit.homework12.extramile;
 
 public class Car {
     private final CarMake name;
