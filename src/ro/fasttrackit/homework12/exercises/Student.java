@@ -1,4 +1,4 @@
-package ro.fasttrackit.homework12;
+package ro.fasttrackit.homework12.exercises;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,12 +12,13 @@ public class Student {
         student.put("ionut", 9);
         student.put("ana", 10);
         student.put("mihaela", 6);
-        student.put("claudiu", 5);
-        student.put("andreia", 8);
+        student.put("claudiu", 10);
+        student.put("ioana", 8);
+        student.put("andrea", 8);
 
         System.out.println(student);
         System.out.println("Student with the highest grade: " + getMaxGrade(student));
-    }
+        }
 
     private static String getMaxGrade(Map<String, Integer> studentGrades) {
         Map.Entry<String, Integer> maxGrade = null;
