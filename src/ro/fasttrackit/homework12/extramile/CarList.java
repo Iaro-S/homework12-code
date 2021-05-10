@@ -1,6 +1,6 @@
 package ro.fasttrackit.homework12.extramile;
 
-public enum CarMake {
+public enum CarList {
     DACIA,
     AUDI,
     MAZDA,

@@ -5,18 +5,22 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         CarShop carShop = new CarShop(List.of(
-                new Car(CarMake.MAZDA, 12, 300000, 4000),
-                new Car(CarMake.VOLVO, 2, 30000, 11000),
-                new Car(CarMake.DACIA, 1, 300001, 40000),
-                new Car(CarMake.FERARI, 3, 20000, 3000),
-                new Car(CarMake.BMW, 10, 200000, 4200),
-                new Car(CarMake.BMW, 3, 20000, 24200),
-                new Car(CarMake.FERARI, 7, 20000, 14200)
+                new Cars(CarList.MAZDA, 11, 300000, 4000),
+                new Cars(CarList.VOLVO, 2, 30000, 11000),
+                new Cars(CarList.DACIA, 1, 300001, 75000),
+                new Cars(CarList.FERARI, 3, 20000, 100000),
+                new Cars(CarList.BMW, 10, 200000, 3900),
+                new Cars(CarList.BMW, 3, 20000, 24200),
+                new Cars(CarList.FERARI, 1, 7000, 150000),
+                new Cars(CarList.AUDI, 1, 62000, 45000),
+                new Cars(CarList.VOLVO, 1, 55000, 17000),
+                new Cars(CarList.FERARI, 1, 15000, 35000)
         ));
-        System.out.println(carShop.makeToAge() + "\n");
-        System.out.println(carShop.makeToNumber()+ "\n");
-        System.out.println(carShop.makeToKm()+ "\n");
-        System.out.println(carShop.rangeToCars(10000)+ "\n");
-        System.out.println(carShop.rangeToCars(1)+ "\n");
+        System.out.println("\n" + "Each model car in the shop:" + carShop.carToNumber());
+        System.out.println("\n" + "Car name to sum kilometers: " + carShop.carToKm());
+       /* System.out.println(carShop.makeToAge() + "\n");
+        System.out.println(carShop.rangeToCars(10000) + "\n");
+        System.out.println(carShop.rangeToCars(1) + "\n");
+    */
     }
 }

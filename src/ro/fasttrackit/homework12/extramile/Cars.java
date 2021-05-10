@@ -1,19 +1,19 @@
 package ro.fasttrackit.homework12.extramile;
 
-public class Car {
-    private final CarMake name;
+public class Cars {
+    private final CarList name;
     private final int age;
     private final int km;
-    private final double price;
+    private final int price;
 
-    public Car(CarMake name, int age, int km, double price) {
+    public Cars(CarList name, int age, int km, int price) {
         this.name = name;
         this.age = age;
         this.km = km;
         this.price = price;
     }
 
-    public CarMake getName() {
+    public CarList getName() {
         return name;
     }
 
@@ -25,7 +25,7 @@ public class Car {
         return km;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
