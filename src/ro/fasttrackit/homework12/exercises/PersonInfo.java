@@ -2,10 +2,10 @@ package ro.fasttrackit.homework12.exercises;
 
 import java.util.*;
 
-public class PersonList {
+public class PersonInfo {
     private final List<Person> persons = new ArrayList<>();
 
-    public PersonList(Collection<Person> persons) {
+    public PersonInfo(Collection<Person> persons) {
         if (persons != null) {
             this.persons.addAll(persons);
         }
