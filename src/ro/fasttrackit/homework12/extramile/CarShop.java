@@ -58,4 +58,9 @@ public class CarShop {
         return result;
     }
 
+    private Map<PriceRange, List<Cars>> priceToCar(Cars car, int priceValue) {
+        Map<PriceRange, List<Cars>> result = new HashMap<>();
+        int price = car.getPrice();
+        return result;
+    }
 }
