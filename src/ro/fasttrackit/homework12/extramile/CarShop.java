@@ -52,9 +52,10 @@ public class CarShop {
     }
 
     private KmRange calculateRange(Cars car, Integer rangeValues) {
-        int carKm = car.getKm();
-        return new KmRange(carKm / rangeValues * rangeValues,
-                (carKm / rangeValues + 1) * rangeValues);
+        int km = car.getKm();
+        KmRange result = new KmRange((km / rangeValues * rangeValues),
+                (km / rangeValues + 1) * rangeValues);
+        return result;
     }
 
 }
