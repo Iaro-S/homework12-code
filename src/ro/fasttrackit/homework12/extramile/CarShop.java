@@ -37,9 +37,24 @@ public class CarShop {
         return result;
     }
 
-    public Map<KmRange, List<CarList>> rangeToCar(int rangeSize) {
-        Map<KmRange, List<CarList>> result = new HashMap<>();
-
+    public Map<KmRange, List<Cars>> rangeToCar(int rangeValues) {
+        Map<KmRange, List<Cars>> result = new HashMap<>();
+        for (Cars car : cars) {
+            KmRange carRanges = calculateRange(car, rangeValues);
+            List<Cars> carsInRange = result.get(carRanges);
+            if (carsInRange == null) {
+                carsInRange = new ArrayList<>();
+                result.put(carRanges, carsInRange);
+            }
+            carsInRange.add(car);
+        }
         return result;
     }
+
+    private KmRange calculateRange(Cars car, Integer rangeValues) {
+        int carKm = car.getKm();
+        return new KmRange(carKm / rangeValues * rangeValues,
+                (carKm / rangeValues + 1) * rangeValues);
+    }
+
 }

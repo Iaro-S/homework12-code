@@ -18,6 +18,7 @@ public class Main {
         ));
         System.out.println("\n" + "Each model car in the shop:" + carShop.carToNumber());
         System.out.println("\n" + "Car name to sum kilometers: " + carShop.carToKm());
-
+        System.out.println("\n" + carShop.rangeToCar(15000));
+        System.out.println("\n" + carShop.rangeToCar(1));
     }
 }
